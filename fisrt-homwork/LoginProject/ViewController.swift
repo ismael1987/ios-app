@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         message.isHidden = true
@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         loadingShap.isHidden = false
         loadingShap.startAnimating()
         print("clicked")
+        
     }
     
     func checkLogin(){
@@ -65,6 +66,9 @@ class ViewController: UIViewController {
             message.text = "Please enter your email"
             return
         }
+        
+        
+        
         if isValidEmail(emailStr:email) == false {
             message.isHidden = false
             message.text = "Please enter valid email address"
